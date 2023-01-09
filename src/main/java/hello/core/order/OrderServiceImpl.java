@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-@RequiredArgsConstructor // 생성자를 만듬
 public class OrderServiceImpl implements OrderService{
 //    기획자가 없는 경우
 //    private final MemberRepository memberRepository = new MemoryMemberRepository();
@@ -20,11 +19,11 @@ public class OrderServiceImpl implements OrderService{
     private final DiscountPolicy discountPolicy;
 
 //    2) 생성자를 통해서 MemberRepository, DiscountPolicy(역할)에 어떤 구현체(배우)가 들어갈지 정할 것임
-//    @Autowired
-//    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
-//        this.memberRepository = memberRepository;
-//        this.discountPolicy = discountPolicy;
-//    }
+    @Autowired
+    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+        this.memberRepository = memberRepository;
+        this.discountPolicy = discountPolicy;
+    }
 
 
     @Override
