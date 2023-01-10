@@ -24,7 +24,7 @@ public class MyLogger {
 
     @PostConstruct
     public void init(){
-        String uuid = UUID.randomUUID().toString(); // 유니크 id 부여
+        uuid = UUID.randomUUID().toString(); // 유니크 id 부여
         System.out.println("[" + uuid + "] request scope bean create:" + this);
     }
 
