@@ -41,7 +41,7 @@ public class SingletonWithPrototype1 {
 
     @Scope("singleton")
     static class ClientBean{
-        @Autowired
+
         private Provider<PrototypeBean> prototypeBeanProvider; // PrototypeBean 찾아주는 역할
 
         public int logic() {

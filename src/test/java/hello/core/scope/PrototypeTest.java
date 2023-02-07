@@ -16,8 +16,8 @@ public class PrototypeTest {
         PrototypeBean prototypeBean1 = ac.getBean(PrototypeBean.class);
         System.out.println("find prototypeBean2");
         PrototypeBean prototypeBean2 = ac.getBean(PrototypeBean.class);
-        System.out.println("find prototypeBean1");
-        System.out.println("find prototypeBean2");
+        System.out.println("find prototypeBean1 : " + prototypeBean1);
+        System.out.println("find prototypeBean2 : " + prototypeBean2);
         assertThat(prototypeBean1).isNotSameAs(prototypeBean2);
 
         prototypeBean1.destroy();

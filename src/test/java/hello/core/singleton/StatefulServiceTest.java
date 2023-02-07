@@ -20,7 +20,7 @@ class StatefulServiceTest {
         statefulService1.order("b", 20000);
 
         int price = statefulService1.getPrice();
-        Assertions.assertThat(statefulService1.getPrice()).isEqualTo(20000);
+        Assertions.assertThat(price).isEqualTo(20000);
     }
 
     static  class TestConfig {
